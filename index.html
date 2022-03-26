@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Request design</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header__container">	
+			<div class="header__top">
+				<div class="header__burger">
+					<span></span>
+				</div>
+				<img src="img/logo.png" alt="logo" class="header__logo">
+				<form>
+					<input type="search" name="search" placeholder="Поиск товаров..">
+					<button type="submit"><img src="img/Group180.png" alt="search"></button>
+				</form>
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item"><img src="img/delivery.png" alt="delivery" class="header__delivery"></li>
+						<li class="menu__item"><img src="img/account.png" alt="accoun" class="header__account"></li>
+						<li class="menu__item"><img src="img/order.png" alt="order" class="header__order"></li>
+					</ul>	 
+				</nav>
+			</div>
+			<ul class="header__info info">
+					<li class="info__item"><img src="img/mark.png" alt="city" class="info__city"><span class="info__city">Екатеринбург</span></li>
+					<li class="info__item"><img src="img/phone.png" alt="phone" class="info__phone"><span class="info__phone">+7 (495) 506-36-50</span></li>
+					<li class="info__item"><img src="img/mail.png" alt="mail" class="info__mail"><span class="info__mail">office@uconerfo.ru</span></li>
+					<li class="info__item"><img src="img/edit.png" alt="payment" class="info__payment"><span class="info__payment">Заявка на расчет</span></li>
+					<li class="info__item"><img src="img/headphone.png" alt="contacts" class="info__contacts"><span class="info__contacts">Контакты</span></li>
+			</ul>
+			<ul class="header__breadcrumb breadcrumb">
+				<li class="breadcrumb__item"><a href="#">Главная</a></li>
+				<li class="breadcrumb__item"><a href="#">Отопительное оборудование</a></li>
+			</ul>
+		</header>
+		<div class="header__ad ad">
+			<div class="ad__container">
+				<article class="ad__text">
+					<p class="ad__title">Дозаторы и антисептики</p>
+					<span class="ad__description">Устанавливаются в общественных местах для предотвращения распространения вирусов микробов</span>
+				</article>
+				<img src="img/Group184.png" alt="dozator" class="ad__image">
+				<button type="submit" class="ad__button"><img src="img/Group187.png" alt="arrows">Подробнее</button>
+			</div>
+		</div>
+		<main class="main__container">
+			<h1 class="main__title">Отопительное оборудование</h1>
+			<div class="main__content">
+				<aside class="main__filters filters">
+					<div class="filters__title title">
+						<h2 class="title__text">Фильтры</h2>
+						<button type="reset" class="title__button">Сбросить<img src="img/cross.png" alt="cross"></button>
+					</div>
+					<ul class="filters__list">
+						<li class="filters__equip-type equip-type">
+							<h3 class="equip-type__title filter-button" id="filter-button">Отопительное оборудование<img src="img/arrow.png" alt="arrow" class=""></h3>
+							<ul class="equip-type__list" id="hide-panel">
+								<li>
+									<input type="checkbox" id="radiator" name="radiator" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="radiator">Радиаторы отопления</label>
+								</li>
+								<li>
+									<input type="checkbox" id="konvektor" name="konvektor" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="konvektor">Конвекторы отопления</label>
+								</li>
+								<li>
+									<input type="checkbox" id="polotence" name="polotence" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="polotence">Полотенцесушители</label>
+								</li>
+								<li>
+									<input type="checkbox" id="armatura" name="armatura" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="armatura">Арматура для радиаторов</label>
+								</li>
+							</ul>
+						</li>
+						<li class="filters__equip-brand equip-brand">
+							<h3 class="equip-brand__title filter-button" id="filter-button">Бренд<img src="img/arrow.png" alt="arrow" class=""></h3>
+							<ul id="hide-panel">
+								<li>
+									<input type="checkbox" id="Purmo" name="Purmo" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="Purmo">Purmo</label>
+								</li>
+								<li>
+									<input type="checkbox" id="Irsap" name="Irsap" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="Irsap">Irsap</label>
+								</li>
+								<li>
+									<input type="checkbox" id="Terma" name="Terma" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="Terma">Terma</label>
+								</li>
+								<li>
+									<input type="checkbox" id="Loten" name="Loten" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="Loten">Loten</label>
+								</li>
+								<li>
+									<input type="checkbox" id="Guardo" name="Guardo" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="Guardo">Guardo</label>
+								</li>
+							</ul>
+						</li>
+						<li class="filters__price-range price-range">
+							<h3 class="price-range__title">Цена</h3>	
+							<input type="range" min="0" max="100" value="0" id="price-range1" class="price-range__slider" >
+							<input type="range" min="0" max="100" value="60" id="price-range2" class="price-range__slider">
+							<div class="price-range__slider-track">
+								<div id="price-range__values">
+									<span id="value1">0</span>
+									<span id="value2">100</span>
+								</div>
+							</div>
+						</li>
+						<li class="filters__sections-sum sections-sum">
+							<h3 class="sections-sum__title filter-button" id="filter-button">Количество секций<img src="img/arrow.png" alt="arrow" class=""></h3>
+							<ul id="hide-panel">
+								<li>
+									<input type="checkbox" id="4" name="4" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="4">4</label>
+								</li>
+								<li>
+									<input type="checkbox" id="6" name="6" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="6">6</label>
+								</li>
+								<li>
+									<input type="checkbox" id="8" name="8" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="8">8</label>
+								</li>
+								<li>
+									<input type="checkbox" id="12" name="12" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="12">12</label>
+								</li>
+							</ul>
+						</li>
+						<li class="filters__axis-space axis-space">
+							<h3 class="axis-space__title filter-button" id="filter-button">Межосевое расстояние<img src="img/arrow.png" alt="arrow" class=""></h3>
+							<ul id="hide-panel">
+								<li>
+									<input type="checkbox" id="20" name="20" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="20">20 см</label>
+								</li>
+								<li>
+									<input type="checkbox" id="35" name="35" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="35">35 см</label>
+								</li>
+								<li>
+									<input type="checkbox" id="50" name="50" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="50">50 см</label>
+								</li>
+							</ul>
+						</li>
+						<li class="filters__heating-area heating-area">
+							<h3 class="heating-area__title filter-button" id="filter-button">Площадь отопления<img src="img/arrow.png" alt="arrow" class=""></h3>
+							<ul id="hide-panel">
+								<li>
+									<input type="checkbox" id="sqr19" name="sqr19" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="sqr19">Более 19 м2</label>
+								</li>
+								<li>
+									<input type="checkbox" id="sqr8" name="sqr8" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="sqr8">Менее 8 м2</label>
+								</li>
+								<li>
+									<input type="checkbox" id="sqr14" name="sqr14" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="sqr14">от 10 до 14 м2</label>
+								</li>
+								<li>
+									<input type="checkbox" id="sqr26" name="sqr26" class="filters__checkbox">
+									<div class="filters__checkbox-mark"></div>
+									<label for="sqr26">от 15 до 26 м2</label>
+								</li>
+							</ul>
+						</li>
+						<li class="filters__equip-color equip-color">
+							<h3 class="equip-color__title filter-button" id="filter-button">Цвет<img src="img/arrow.png" alt="arrow" class=""></h3>
+							<ul id="hide-panel">
+								<li>
+									<input type="checkbox" id="red" name="red" class="filters__checkbox">
+									<div class="filters__color-mark"></div>
+									<label for="red">Красный</label>
+								</li>
+								<li>
+									<input type="checkbox" id="yellow" name="yellow" class="filters__checkbox">
+									<div class="filters__color-mark"></div>
+									<label for="yellow">Желтый</label>
+								</li>
+								<li>
+									<input type="checkbox" id="green" name="green" class="filters__checkbox">
+									<div class="filters__color-mark"></div>
+									<label for="green">Зеленый</label>
+								</li>
+								<li>
+									<input type="checkbox" id="blue" name="blue" class="filters__checkbox">
+									<div class="filters__color-mark"></div>
+									<label for="blue">Синий</label>
+								</li>
+								<li>
+									<input type="checkbox" id="purple" name="purple" class="filters__checkbox">
+									<div class="filters__color-mark"></div>
+									<label for="purple">Фиолетовый</label>
+								</li>
+								<li>
+									<input type="checkbox" id="pink" name="pink" class="filters__checkbox">
+									<div class="filters__color-mark"></div>
+									<label for="pink">Розовый</label>
+								</li>
+								<li>
+									<input type="checkbox" id="beige" name="beige" class="filters__checkbox">
+									<div class="filters__color-mark"></div>
+									<label for="beige">Бежевый</label>
+								</li>
+								<li>
+									<input type="checkbox" id="white" name="white" class="filters__checkbox">
+									<div class="filters__color-mark"></div>
+									<label for="white">Белый</label>
+								</li>
+								<li>
+									<input type="checkbox" id="black" name="black" class="filters__checkbox">
+									<div class="filters__color-mark"></div>
+									<label for="black">Черный</label>
+								</li>
+								<li>
+									<input type="checkbox" id="grey" name="grey" class="filters__checkbox">
+									<div class="filters__color-mark"></div>
+									<label for="grey">Серый</label>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</aside>
+				<div class="main__catalog catalog">
+					<div class="catalog__filters">
+						<span class="catalog__product-count">2394 товара</span>
+						<div class="catalog__price-filter price-filter">
+							<span class="price-filter__title">Цена:</span>
+							<select name="price-filter" class="price-filter__value">
+								<option value="up">По возрастанию</option>
+								<option value="down">По убыванию</option>
+							</select>
+						</div>
+					</div>
+					<div class="catalog__list">
+						<div class="catalog__product-card product-card">
+							<img src="img/image130.png" alt="radiator">
+							<div class="product-card__descrition">
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image123.png" alt="radiator">
+							<div class="product-card__descrition">
+							<span class="product-card__sale">% Акция</span>
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image264.png" alt="radiator" class="product-card__image">
+							<div class="product-card__descrition">
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image130.png" alt="radiator">
+							<div class="product-card__descrition">
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image123.png" alt="radiator">
+							<div class="product-card__descrition">
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image264.png" alt="radiator" class="product-card__image">
+							<div class="product-card__descrition">
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image130.png" alt="radiator">
+							<div class="product-card__descrition">
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image123.png" alt="radiator">
+							<div class="product-card__descrition">
+							<span class="product-card__sale">% Акция</span>
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image264.png" alt="radiator" class="product-card__image">
+							<div class="product-card__descrition">
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image130.png" alt="radiator">
+							<div class="product-card__descrition">
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image123.png" alt="radiator">
+							<div class="product-card__descrition">
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+						<div class="catalog__product-card product-card">
+							<img src="img/image264.png" alt="radiator" class="product-card__image">
+							<div class="product-card__descrition">
+							<span class="product-card__name">Биметаллический радиатор Royal Thermo Indigo Super</span>
+							<span class="product-card__price">4250 р</span>
+							<button class="product-card__order"><img src="img/order2.png" alt="order"></button>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			Footer
+		</footer>
+	</div>
+	<script src="js/range-script.js"></script>
+	<script src="js/filter-hide-script.js"></script>
+	<script src="js/color-check.js"></script>
+</body>
+
+</html>

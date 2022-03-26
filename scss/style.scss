@@ -1,0 +1,460 @@
+*,
+*::before,
+*::after {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+}
+
+body {
+	font-family: "Euclid Circular A";
+	font-size: 20px;
+	color: #2b2e34;
+	background-color: #fbfbfb;
+}
+/* --------------------------- */
+.wrapper {
+	// overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	position: relative;
+}
+/* --------------Header------------- */
+
+.main__container {
+	flex: 1 1 auto;
+	width: 1520px;
+}
+[class*="__container"] {
+	max-width: 1520px;
+	margin: 0px auto;
+}
+.header__container {
+	width: 1520px;
+	padding-top: 16px;
+	form {
+		width: 852px;
+		position: relative;
+		input,
+		button {
+			border: none;
+			outline: none;
+		}
+		input {
+			width: 100%;
+			height: 52px;
+			background-color: #f6f6f6;
+			padding-left: 64px;
+			&::-webkit-input-placeholder {
+				color: #73737b;
+				font-family: "Euclid Circular A";
+				font-size: 16px;
+			}
+			&:-moz-placeholder {
+				color: #73737b;
+				font-family: "Euclid Circular A";
+				font-size: 16px;
+			}
+			&:-ms-input-placeholder {
+				color: #73737b;
+				font-family: "Euclid Circular A";
+				font-size: 16px;
+			}
+		}
+		button {
+			height: 20px;
+			width: 20px;
+			position: absolute;
+			top: 16px;
+			left: 32px;
+			cursor: pointer;
+		}
+	}
+}
+.header__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+}
+.menu__list {
+	display: flex;
+	justify-content: space-between;
+	width: 156px;
+}
+.header__burger {
+	display: block;
+	position: relative;
+	width: 32px;
+	height: 20px;
+
+	span {
+		position: absolute;
+		background-color: #000;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+	}
+	&:before,
+	&:after {
+		content: "";
+		background-color: #000;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+	}
+	&:before {
+		top: 0;
+	}
+	&:after {
+		bottom: 0;
+	}
+}
+.header__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	border-top: 16px solid #c4c4c4;
+	font-size: 18px;
+}
+.info__item {
+	display: flex;
+	align-items: center;
+	img {
+		margin-right: 12px;
+	}
+}
+.header__ad {
+	background-color: #1dbcd1;
+	position: absolute;
+	width: 100vw;
+	top: 184px;
+}
+.ad__container {
+	display: flex;
+	align-items: center;
+}
+.ad__text {
+	width: 580px;
+	height: 146px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: #fff;
+}
+.ad__title {
+	font-family: "Euclid Circular A SemiBold";
+	font-size: 42px;
+}
+.ad__description {
+	font-size: 18px;
+	line-height: 28px;
+}
+.ad__button {
+	font-family: "Euclid Circular A";
+	font-size: 18px;
+	padding: 28px 50px;
+	img {
+		margin-right: 36px;
+	}
+}
+.header__breadcrumb {
+	margin-top: 368px;
+	& li {
+		display: inline;
+		font-size: 16px;
+		& + li:before {
+			color: #000;
+			content: "/\00a0";
+		}
+	}
+}
+
+/* -------------Main-------------- */
+.main__title {
+	font-family: "Euclid Circular A Medium";
+	font-size: 40px;
+	padding: 60px 0;
+}
+.main__content {
+	display: flex;
+	justify-content: space-between;
+}
+/* -------------Aside-------------- */
+.main__filters {
+	height: 1912px;
+	width: 356px;
+	background-color: #f4f4f4;
+}
+/*-----------AsideTitle-----------*/
+.filters__title {
+	display: flex;
+	justify-content: space-between;
+	padding: 32px 32px 0 32px;
+	.title__text {
+		font-family: "Euclid Circular A Medium";
+		font-size: 22px;
+	}
+	.title__button {
+		font-family: "Euclid Circular A Medium";
+		font-size: 16px;
+		padding: 2px;
+		color: #7e838c;
+		background-color: transparent;
+		cursor: pointer;
+		img {
+			position: relative;
+			top: 3px;
+			padding-left: 16px;
+		}
+	}
+}
+/*-----------AsideFilters-----------*/
+ul.filters__list {
+	padding: 0 30px 0 25px;
+	background-color: #f4f4f4;
+	li {
+		h3 {
+			font-family: "Euclid Circular A Medium";
+			font-size: 18px;
+			padding-top: 60px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			img {
+				height: 6px;
+				cursor: pointer;
+			}
+		}
+		ul#hide-panel {
+			display: none;
+			li {
+				position: relative;
+				.filters__checkbox {
+					position: absolute;
+					height: 16px;
+					width: 16px;
+					opacity: 0;
+					z-index: 2;
+					top: 20px;
+					left: 0;
+					cursor: pointer;
+					&:checked {
+						& + .filters__checkbox-mark {
+							background: center / contain no-repeat url("../img/checkbox.png");
+						}
+						& ~ label {
+							font-family: "Euclid Circular A SemiBold";
+						}
+						& + .filters__color-mark::before {
+							content: '';
+							position: absolute;
+							left: 0px;
+							top: 0px;
+							width: 12px;
+							height: 12px;
+							border: #000 solid 2px;
+							border-radius: 50%;
+						}
+					}
+					& + .filters__color-mark {
+						position: relative;
+						height: 11px;
+						width: 11px;
+						border-radius: 50%;
+						left: 4px;
+						top: 20px;
+						background-color: red;
+					}
+				}
+				.filters__checkbox-mark {
+					position: relative;
+					height: 16px;
+					width: 16px;
+					left: 0px;
+					top: 20px;
+					background: #ffffff;
+				}
+				
+				label {
+					position: relative;
+					top: 4px;
+					font-family: "Euclid Circular A";
+					font-size: 14px;
+					padding-left: 32px;
+					cursor: pointer;
+				}
+			}
+			
+		}
+	}
+}
+/*-----------AsidePriceRange-----------*/
+.filters__price-range {
+	position: relative;
+	width: 100%;
+	height: 168px;
+	input[type="range"] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		width: 100%;
+		outline: none;
+		position: absolute;
+		background-color: transparent;
+		top: 100px;
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			width: 3px;
+			height: 20px;
+			background: #38d3e8;
+			cursor: ew-resize;
+		}
+		&::-moz-range-thumb {
+			-webkit-appearance: none;
+			width: 3px;
+			height: 20px;
+			background: #38d3e8;
+			cursor: ew-resize;
+		}
+		&::-ms-thumb {
+			appearance: none;
+			width: 3px;
+			height: 20px;
+			background: #38d3e8;
+			cursor: ew-resize;
+		}
+		&::-webkit-slider-runnable-track {
+			-webkit-appearance: none;
+			height: 3px;
+		}
+		&::-moz-range-track {
+			-moz-appearance: none;
+			height: 3px;
+		}
+		&::-ms-track{
+			appearance: none;
+			height: 3px;
+	  }
+	}
+	.price-range__slider-track {
+		width: 100%;
+		height: 3px;
+		position: absolute;
+		border-radius: 4px;
+		top: 108px;
+		span {
+			width: min-content;
+			position: absolute;
+			top: 24px;
+			left: 50px;
+			font-size: 14px;
+		}
+	}
+}
+
+/* -------------Catalog-------------- */
+.main__catalog {
+	max-width: min-content;
+}
+.catalog__filters {
+	height: 88px;
+	width: 1132px;
+	background-color: #f4f4f4;
+	display: flex;
+	justify-content: space-between;
+	padding: 32px 40px;
+}
+.catalog__list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.catalog__product-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	width: 356px;
+	height: 488px;
+	margin-top: 36px;
+	padding: 8px 30px 30px 30px;
+	background-color: #fff;
+	img {
+		margin: 0 auto;
+		width: min-content;
+	}
+	.product-card__descrition {
+		height: 120px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.product-card__name {
+		font-family: "Euclid Circular A Medium";
+		max-width: 300px;
+		font-size: 16px;
+	}
+	.product-card__price {
+		font-family: "Euclid Circular A SemiBold";
+		max-width: 300px;
+		font-size: 20px;
+	}
+	button {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 84px;
+		height: 84px;
+		background-color: #38d3e8;
+	}
+	&:nth-child(3n) {
+		padding-top: 32px;
+	}
+	.product-card__sale {
+		height: 36px;
+		width: 112px;
+		color: #fff;
+		background-color: #f31b4f;
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 16px;
+		padding: 8px 20px;
+	}
+}

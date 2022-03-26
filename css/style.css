@@ -1,0 +1,600 @@
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+body {
+  font-family: "Euclid Circular A";
+  font-size: 20px;
+  color: #2b2e34;
+  background-color: #fbfbfb;
+}
+
+/* --------------------------- */
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
+/* --------------Header------------- */
+.main__container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 1520px;
+}
+
+[class*="__container"] {
+  max-width: 1520px;
+  margin: 0px auto;
+}
+
+.header__container {
+  width: 1520px;
+  padding-top: 16px;
+}
+
+.header__container form {
+  width: 852px;
+  position: relative;
+}
+
+.header__container form input,
+.header__container form button {
+  border: none;
+  outline: none;
+}
+
+.header__container form input {
+  width: 100%;
+  height: 52px;
+  background-color: #f6f6f6;
+  padding-left: 64px;
+}
+
+.header__container form input::-webkit-input-placeholder {
+  color: #73737b;
+  font-family: "Euclid Circular A";
+  font-size: 16px;
+}
+
+.header__container form input:-moz-placeholder {
+  color: #73737b;
+  font-family: "Euclid Circular A";
+  font-size: 16px;
+}
+
+.header__container form input:-ms-input-placeholder {
+  color: #73737b;
+  font-family: "Euclid Circular A";
+  font-size: 16px;
+}
+
+.header__container form button {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 16px;
+  left: 32px;
+  cursor: pointer;
+}
+
+.header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 156px;
+}
+
+.header__burger {
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 20px;
+}
+
+.header__burger span {
+  position: absolute;
+  background-color: #000;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  top: 9px;
+}
+
+.header__burger:before, .header__burger:after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+}
+
+.header__burger:before {
+  top: 0;
+}
+
+.header__burger:after {
+  bottom: 0;
+}
+
+.header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  border-top: 16px solid #c4c4c4;
+  font-size: 18px;
+}
+
+.info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info__item img {
+  margin-right: 12px;
+}
+
+.header__ad {
+  background-color: #1dbcd1;
+  position: absolute;
+  width: 100vw;
+  top: 184px;
+}
+
+.ad__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ad__text {
+  width: 580px;
+  height: 146px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #fff;
+}
+
+.ad__title {
+  font-family: "Euclid Circular A SemiBold";
+  font-size: 42px;
+}
+
+.ad__description {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.ad__button {
+  font-family: "Euclid Circular A";
+  font-size: 18px;
+  padding: 28px 50px;
+}
+
+.ad__button img {
+  margin-right: 36px;
+}
+
+.header__breadcrumb {
+  margin-top: 368px;
+}
+
+.header__breadcrumb li {
+  display: inline;
+  font-size: 16px;
+}
+
+.header__breadcrumb li + li:before {
+  color: #000;
+  content: "/\00a0";
+}
+
+/* -------------Main-------------- */
+.main__title {
+  font-family: "Euclid Circular A Medium";
+  font-size: 40px;
+  padding: 60px 0;
+}
+
+.main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* -------------Aside-------------- */
+.main__filters {
+  height: 1912px;
+  width: 356px;
+  background-color: #f4f4f4;
+}
+
+/*-----------AsideTitle-----------*/
+.filters__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 32px 32px 0 32px;
+}
+
+.filters__title .title__text {
+  font-family: "Euclid Circular A Medium";
+  font-size: 22px;
+}
+
+.filters__title .title__button {
+  font-family: "Euclid Circular A Medium";
+  font-size: 16px;
+  padding: 2px;
+  color: #7e838c;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.filters__title .title__button img {
+  position: relative;
+  top: 3px;
+  padding-left: 16px;
+}
+
+/*-----------AsideFilters-----------*/
+ul.filters__list {
+  padding: 0 30px 0 25px;
+  background-color: #f4f4f4;
+}
+
+ul.filters__list li h3 {
+  font-family: "Euclid Circular A Medium";
+  font-size: 18px;
+  padding-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ul.filters__list li h3 img {
+  height: 6px;
+  cursor: pointer;
+}
+
+ul.filters__list li ul#hide-panel {
+  display: none;
+}
+
+ul.filters__list li ul#hide-panel li {
+  position: relative;
+}
+
+ul.filters__list li ul#hide-panel li .filters__checkbox {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  opacity: 0;
+  z-index: 2;
+  top: 20px;
+  left: 0;
+  cursor: pointer;
+}
+
+ul.filters__list li ul#hide-panel li .filters__checkbox:checked + .filters__checkbox-mark {
+  background: center/contain no-repeat url("../img/checkbox.png");
+}
+
+ul.filters__list li ul#hide-panel li .filters__checkbox:checked ~ label {
+  font-family: "Euclid Circular A SemiBold";
+}
+
+ul.filters__list li ul#hide-panel li .filters__checkbox:checked + .filters__color-mark::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 12px;
+  height: 12px;
+  border: #000 solid 2px;
+  border-radius: 50%;
+}
+
+ul.filters__list li ul#hide-panel li .filters__checkbox + .filters__color-mark {
+  position: relative;
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  left: 4px;
+  top: 20px;
+  background-color: red;
+}
+
+ul.filters__list li ul#hide-panel li .filters__checkbox-mark {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  left: 0px;
+  top: 20px;
+  background: #ffffff;
+}
+
+ul.filters__list li ul#hide-panel li label {
+  position: relative;
+  top: 4px;
+  font-family: "Euclid Circular A";
+  font-size: 14px;
+  padding-left: 32px;
+  cursor: pointer;
+}
+
+/*-----------AsidePriceRange-----------*/
+.filters__price-range {
+  position: relative;
+  width: 100%;
+  height: 168px;
+}
+
+.filters__price-range input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  outline: none;
+  position: absolute;
+  background-color: transparent;
+  top: 100px;
+}
+
+.filters__price-range input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 3px;
+  height: 20px;
+  background: #38d3e8;
+  cursor: ew-resize;
+}
+
+.filters__price-range input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 3px;
+  height: 20px;
+  background: #38d3e8;
+  cursor: ew-resize;
+}
+
+.filters__price-range input[type="range"]::-ms-thumb {
+  appearance: none;
+  width: 3px;
+  height: 20px;
+  background: #38d3e8;
+  cursor: ew-resize;
+}
+
+.filters__price-range input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 3px;
+}
+
+.filters__price-range input[type="range"]::-moz-range-track {
+  -moz-appearance: none;
+  height: 3px;
+}
+
+.filters__price-range input[type="range"]::-ms-track {
+  appearance: none;
+  height: 3px;
+}
+
+.filters__price-range .price-range__slider-track {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  border-radius: 4px;
+  top: 108px;
+}
+
+.filters__price-range .price-range__slider-track span {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  position: absolute;
+  top: 24px;
+  left: 50px;
+  font-size: 14px;
+}
+
+/* -------------Catalog-------------- */
+.main__catalog {
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+
+.catalog__filters {
+  height: 88px;
+  width: 1132px;
+  background-color: #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 32px 40px;
+}
+
+.catalog__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.catalog__product-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  width: 356px;
+  height: 488px;
+  margin-top: 36px;
+  padding: 8px 30px 30px 30px;
+  background-color: #fff;
+}
+
+.catalog__product-card img {
+  margin: 0 auto;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.catalog__product-card .product-card__descrition {
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.catalog__product-card .product-card__name {
+  font-family: "Euclid Circular A Medium";
+  max-width: 300px;
+  font-size: 16px;
+}
+
+.catalog__product-card .product-card__price {
+  font-family: "Euclid Circular A SemiBold";
+  max-width: 300px;
+  font-size: 20px;
+}
+
+.catalog__product-card button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 84px;
+  height: 84px;
+  background-color: #38d3e8;
+}
+
+.catalog__product-card:nth-child(3n) {
+  padding-top: 32px;
+}
+
+.catalog__product-card .product-card__sale {
+  height: 36px;
+  width: 112px;
+  color: #fff;
+  background-color: #f31b4f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  padding: 8px 20px;
+}
